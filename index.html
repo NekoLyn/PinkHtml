@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .one {
-        text-align: center;
+      .ztmy-top--nav li {
+        position: relative;
+      }
+      .ztmy-top--nav li.neko a {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+
+      .ztmy-top--nav a:before {
+        position: absolute;
+        content: "a";
+        z-index: 50;
+        transition: all 1s;
+        background-color: #8027d0;
+        height: 100%;
+        bottom: -5px;
+        left: 5px;
+        width: 0px;
+      }
+
+      .ztmy-top--nav a:hover:before {
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <div class="nav"></div>
-    <div id="ban"></div>
-    <p class="neko"></p>
-    <p id="demo"></p>
-    <div class="demo1"></div>
-    <div class="demo2"></div>
-    <div class="demo3"></div>
-    <div class="demo4"></div>
-    <div class="demo5"></div>
-    <div class="one">123</div>
-    <div>789</div>
-    <div>789</div>
-    <div>789</div>
-    <div>789</div>
-    <div>789</div>
-    <div>1+1</div>
-    <div>2+1</div>
-    <div>3+1</div>
-    <div>4+1</div>
+    <div class="ztmy-top--nav">
+      <li><a href="#">Navigator</a></li>
+
+      <li><a href="#">Navigator</a></li>
+      <li><a href="#">Navigator</a></li>
+      <li><a href="#">Navigator</a></li>
+      <li class="neko"><a href="#">neko</a></li>
+    </div>
   </body>
 </html>
